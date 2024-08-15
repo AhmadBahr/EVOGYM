@@ -1,8 +1,8 @@
-import Navbar from "@/scenes/Navbar";
+import Navbar from "./scenes/Navabr/Index";
 function App() {
 
   return <div className="app bg-gray-20">
-    <Navbar />
+    <Navbar title="Gym" />
   </div>
 
 }
