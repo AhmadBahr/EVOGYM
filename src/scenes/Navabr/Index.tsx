@@ -1,11 +1,13 @@
 import { Bars3Icon } from "@heroicons/react/24/solid";
 import Logo from "../../assets/Logo.png";
+import Link from "./Link";
 
 type Props = {
-    title: string;
+    selectedPage: string;
+    setSelectedPage: (value: string) => void;
 };
 
-const Navbar = (props: Props) => {
+const Navbar = ({ selectedPage, setSelectedPage }: Props) => {
     const flexBetween = "flex items-center justify-between";
 
     return (
@@ -19,10 +21,22 @@ const Navbar = (props: Props) => {
                         {/* RIGHT SIDE */}
                         <div className={`${flexBetween} w-full`}>
                             <div className={`flex justify-between w-full gap-8 text-sm`}>
-                                <div className="hover:text-gray-400">Home</div>
-                                <div className="hover:text-gray-400">Benefits</div>
-                                <div className="hover:text-gray-400">Our Classes</div>
-                                <div className="hover:text-gray-400">Contact Us</div>
+                                <Link page="Home"
+                                    selectedPage={selectedPage}
+                                    setSelectedPage={setSelectedPage}
+                                />
+                                <Link page="Benefits"
+                                    selectedPage={selectedPage}
+                                    setSelectedPage={setSelectedPage}
+                                />
+                                <Link page="Our Classes"
+                                    selectedPage={selectedPage}
+                                    setSelectedPage={setSelectedPage}
+                                />
+                                <Link page="Contact Us"
+                                    selectedPage={selectedPage}
+                                    setSelectedPage={setSelectedPage}
+                                />
                             </div>
                             <div className="flex gap-8">
                                 <button className="bg-secondary-500 rounded-full px-10 py-2 text-white">
