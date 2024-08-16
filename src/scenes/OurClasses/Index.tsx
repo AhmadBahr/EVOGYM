@@ -8,6 +8,38 @@ import image6 from '../../assets/image6.png'
 import { motion } from 'framer-motion'
 import HText from '../../shared/Htext'
 
+const classes = [
+    {
+        name: "Weight Training Classes",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+        image: image1
+    },
+    {
+        name: "Weight Training Classes",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+        image: image2
+    },
+    {
+        name: "Weight Training Classes",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+        image: image3
+    },
+    {
+        name: "Weight Training Classes",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+        image: image4
+    },
+    {
+        name: "Weight Training Classes",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+        image: image5
+    },
+    {
+        name: "Weight Training Classes",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+        image: image6
+    }
+]
 type Props = {
     setselectedPage: (value: SelectedPage) => void
 }
@@ -34,24 +66,17 @@ function OurClasses({ setselectedPage }: Props) {
             </motion.div>
             <div className='mt-10 h-[353px] w-full overflow-x-auto overflow-y-hidden'>
                 <ul className='whitespace-nowrap'>
-                    <li className='inline-block mx-5'>
-                        <img className='h-full w-[450px]' src={image1} alt="" />
-                    </li>
-                    <li className='inline-block mx-5'>
-                        <img className='h-full w-[450px]' src={image2} alt="" />
-                    </li>
-                    <li className='inline-block mx-5'>
-                        <img className='h-full w-[450px]' src={image3} alt="" />
-                    </li>
-                    <li className='inline-block mx-5'>
-                        <img className='h-full w-[450px]' src={image4} alt="" />
-                    </li>
-                    <li className='inline-block mx-5'>
-                        <img className='h-full w-[450px]' src={image5} alt="" />
-                    </li>
-                    <li className='inline-block mx-5'>
-                        <img className='h-full w-[450px]' src={image6} alt="" />
-                    </li>
+                    {classes.map((item, index) => (
+                        <li key={`${item.name}-${index}`} className='inline-block mx-5'>
+                            <div className='w-80 h-[330px] bg-primary-200 rounded-lg overflow-hidden'>
+                                <img src={item.image} alt={item.name} />
+                                <div className='p-5'>
+                                    <p className='text-2xl font-medium'>{item.name}</p>
+                                    <p className='text-md'>{item.description}</p>
+                                </div>
+                            </div>
+                        </li>
+                    ))}
                 </ul>
             </div>
         </motion.div>
