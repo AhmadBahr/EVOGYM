@@ -4,12 +4,12 @@ import {
     AcademicCapIcon,
 }
     from "@heroicons/react/24/solid"
-import { SelectedPage } from "../../shared/types";
+import { BenefitType, SelectedPage } from "../../shared/types";
 import { motion } from "framer-motion";
-import { Children } from "react";
 import Htext from "../../shared/Htext";
+import Benefit from "./Benefit";
 
-const benefits = [
+const benefits: Array<BenefitType> = [
     {
         icon: <HomeModernIcon className="h-10 w-10 text-primary-500" />,
         title: "State-of-the-Art Equipment",
@@ -46,15 +46,20 @@ const Benefits = ({ setSelectedPage }: Props) => {
                 </p>
             </div>
             <div className="md:flex items-center justify-between gap-8 mt-5">
-                <Benefit title="State-of-the-Art Equipment" icon={<HomeModernIcon className="h-10 w-10 text-primary-500" />} />
-                <Benefit title="Expert and Pro Trainers" icon={<UserGroupIcon className="h-10 w-10 text-primary-500" />} />
-                <Benefit title="Unparalleled Training Classes" icon={<AcademicCapIcon className="h-10 w-10 text-primary-500" />} />
+                {
+                    benefits.map((benefit: BenefitType) => (
+                        <Benefit
+                            key={benefit.title}
+                            icon={benefit.icon}
+                            title={benefit.title}
+                            description={benefit.description}
+                            setSelectedPage={setSelectedPage}
+                        />
+                    ))
+                }
             </div>
         </motion.div>
     </section>
-}
-        </motion.div >
-    </section >
 }
 
 export default Benefits
