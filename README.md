@@ -12,9 +12,12 @@
 6. [**Code & Snippets**](#CodeSnippets)
 
 ## General Info
-PixelQuest is a 2D platformer game built using TypeScript and Kaboom.js. Inspired by classic platformers, the game features a pixel art world where players must navigate obstacles, collect items, and defeat enemies to reach the goal. The project demonstrates core game development concepts such as sprite animation, physics, and state management in a browser environment.
+EVOGYM is a responsive gym website built with React and TypeScript, offering users an interactive and dynamic UI. It features sections like services, membership plans, and contact forms. The project is optimized for performance and accessibility, utilizing modern web technologies and best practices.
 
 ## Technologies Used:
+
+# React
+React is a JavaScript library for building user interfaces. EVOGYM uses React's component-based architecture to create reusable, interactive UI elements.
 
 # TypeScript
 TypeScript is a statically typed superset of JavaScript that adds type annotations. It helps catch errors during development and improves the code quality for large-scale projects like PixelQuest.
@@ -22,21 +25,39 @@ TypeScript is a statically typed superset of JavaScript that adds type annotatio
 # CSS3
 CSS3 is used to style the webpage surrounding the game canvas, ensuring it is responsive and visually appealing. It also handles some of the game’s UI components.
 
-# Kaboom.js
+# Tailwind CSS
 Kaboom.js is a lightweight JavaScript game framework for building 2D games. It provides built-in tools for handling sprite rendering, physics, and input, which simplifies the game development process.
+
+# Tailwind Prettier Plugin
+This plugin ensures consistent formatting by integrating Prettier with Tailwind CSS, enforcing best practices when writing utility classes.
+
+# Tailwind Sorting
+Tailwind Sorting enforces consistent class ordering within the code, improving readability and maintainability.
 
 # Vite
 Vite is a fast build tool and development server for modern web projects. It speeds up the development process by providing fast Hot Module Replacement (HMR) and efficient bundling, allowing developers to see changes instantly in the browser.
 
-# HTML5 Canvas
-React is a JavaScript library for building user interfaces. It allows developers to create reusable UI components and manage application state efficiently.
+# Google Fonts
+Google Fonts are used to improve the aesthetics of the site with well-chosen typography that enhances readability and brand feel.
+
+# Heroicons
+Heroicons is a set of free MIT-licensed high-quality SVG icons used for UI elements in the project.
+
+# Framer Motion
+Framer Motion is a library for creating smooth animations and transitions. It is used throughout EVOGYM for an enhanced user experience.
+
+# FormSubmit
+FormSubmit allows the website to handle form submissions via email without requiring a backend, enabling a smooth user experience for contact forms.
+
+# React Anchor Link
+React Anchor Link Smooth Scroll is used to handle smooth scrolling behavior between sections, providing a seamless navigation experience.
 
 ## Setup
 Clone the repository:
-git clone https://github.com/your-username/pixelquest-game.git
+git clone https://github.com/your-username/evogym.git
 
 Navigate to the project directory:
-cd pixelquest-game
+cd evogym
 
 Install dependencies using Vite:
 npm install
@@ -44,20 +65,23 @@ npm install
 Start the development server with Vite:
 npm run dev
 
-Open the game in your browser by navigating to the local server URL displayed by Vite (typically http://localhost:3000).
+Open the website in your browser by navigating to the local server URL displayed by Vite (typically http://localhost:3000).
 
 To build the project for production:
 npm run build
 
 ## Features
 
-Character Movement:
-Control the player character using the arrow keys for movement and the spacebar to jump. The game uses Kaboom's built-in physics engine to handle gravity and collisions with the environment.
-
-Enemies:
-There are various enemies placed in levels. If touched, they will deal damage to the player. The player can defeat enemies by jumping on top of them.
+Responsive Design:
+The website adapts to different screen sizes, providing a seamless experience on both mobile and desktop devices.
 
 Smooth Animations:
-Kaboom.js handles sprite animations for the character, enemies, and objects. Smooth transitions and animated effects enhance the gameplay experience.
+Using Framer Motion, the site features smooth animations that enhance user interactions, such as fade-ins, transitions, and hover effects.
+
+Membership Form:
+The contact and membership form is fully functional and integrated with FormSubmit, allowing users to submit their details and receive a response without a backend server.
+
+Smooth Scrolling:
+The React Anchor Link Smooth Scroll ensures a smooth scroll behavior when navigating between different sections of the page.
 
 # Code & Snippets: 
