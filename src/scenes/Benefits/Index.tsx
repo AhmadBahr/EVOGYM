@@ -25,7 +25,15 @@ const benefits: Array<BenefitType> = [
         title: "Unparalleled Training Classes",
         description: "We provide world class fitness equipment, trainers and classes too."
     }
-]
+];
+
+const container = {
+    hidden: {},
+    visible: {
+        transition: { staggerChildren: 0.2 }
+        
+    }
+};
 
 type Props = {
     setSelectedPage: (value: SelectedPage) => void;
@@ -45,7 +53,14 @@ const Benefits = ({ setSelectedPage }: Props) => {
                     No matter what you're looking for, we've got you covered.
                 </p>
             </div>
-            <div className="md:flex items-center justify-between gap-8 mt-5">
+            <motion.div 
+            className="md:flex items-center justify-between gap-8 mt-5"
+                variants={container}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.5 }}
+                transition={{ duration: 0.5 }}
+            >
                 {
                     benefits.map((benefit: BenefitType) => (
                         <Benefit
@@ -57,7 +72,7 @@ const Benefits = ({ setSelectedPage }: Props) => {
                         />
                     ))
                 }
-            </div>
+            </motion.div>
         </motion.div>
     </section>
 }
