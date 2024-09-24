@@ -19,7 +19,7 @@ EVOGYM is a responsive gym website built with React and TypeScript, offering use
 React is a JavaScript library for building user interfaces. EVOGYM uses React's component-based architecture to create reusable, interactive UI elements.
 
 # TypeScript
-TypeScript is a statically typed superset of JavaScript that adds type annotations. It helps catch errors during development and improves the code quality for large-scale projects like PixelQuest.
+TypeScript is a statically typed superset of JavaScript that adds type annotations. It helps catch errors during development and improves the code quality for large-scale projects
 
 # CSS3
 CSS3 is used to style the webpage surrounding the game canvas, ensuring it is responsive and visually appealing. It also handles some of the game’s UI components.
