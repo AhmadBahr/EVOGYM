@@ -25,7 +25,7 @@ TypeScript is a statically typed superset of JavaScript that adds type annotatio
 CSS3 is used to style the webpage surrounding the game canvas, ensuring it is responsive and visually appealing. It also handles some of the game’s UI components.
 
 # Tailwind CSS
-Kaboom.js is a lightweight JavaScript game framework for building 2D games. It provides built-in tools for handling sprite rendering, physics, and input, which simplifies the game development process.
+Tailwind CSS is a utility-first CSS framework that allows for rapid design and styling of the application. It helps create a responsive and visually appealing user interface with minimal custom CSS.
 
 # Tailwind Prettier Plugin
 This plugin ensures consistent formatting by integrating Prettier with Tailwind CSS, enforcing best practices when writing utility classes.
